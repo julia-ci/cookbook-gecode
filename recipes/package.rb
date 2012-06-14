@@ -35,14 +35,14 @@ when 'ubuntu','debian'
       components ["main"]
       distribution node['lsb']['codename']
       key "2940ABA983EF826A"
-      keyserver "pgpkeys.mit.edu"
+      keyserver "keys.gnupg.net"
       action :add
     end
 
   end
 
   apt_package 'libgecode-dev' do
-    action :upgrade
+    action :install
   end
 
 else
